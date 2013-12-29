@@ -71,6 +71,18 @@ class PlayState extends FlxState
 		add(TheBigToastSlice);
 		add(HowMuchToast);
 		
+		
+		// Load a save if it exists.
+		FlxG.save.bind("ToastSave");
+		
+		if (FlxG.save.data != null)
+		{
+			ToastSlices = FlxG.save.data.ToastSlices;
+			
+		}
+		
+		FlxG.save.close();
+		
 		super.create();
 	}
 	
@@ -107,6 +119,10 @@ class PlayState extends FlxState
 		}
 		
 		
+		// Save
+		FlxG.save.bind("ToastSave");
+		FlxG.save.data.ToastSlices = ToastSlices;
+		FlxG.save.close();
 		super.update();
 	}	
 }
