@@ -41,6 +41,8 @@ class MenuState extends FlxState
 	 */
 	override public function update():Void
 	{
+		// Skip straight onto play state.
+		FlxG.switchState(new PlayState());
 		super.update();
 	}	
 }

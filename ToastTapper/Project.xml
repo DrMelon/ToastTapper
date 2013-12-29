@@ -5,6 +5,14 @@
 	<window width="640" height="480" fps="60" orientation="portrait" resizable="true" if="web" />
 	<window width="640" height="480" fps="60" orientation="landscape" fullscreen="false" hardware="true" vsync="true" unless="web" />
 	
+	<!-- Android-specific options -->
+	<setenv name="JAVA_HOME" value="C:/Program Files/Java/jdk1.7.0_45" if="android" />
+	<window width="0" height="0" if="android"/>
+	<window hardware="true" allow-shaders="true" require-shaders="true" if="android"/>
+	<window vsync="true" antialiasing="1" if="android"/>
+	<window orientation="portrait" if="android"/>
+	
+	
 	<!--The flixel preloader is not accurate in Chrome. You can use it regualary if you embed the swf into a html file, or you can set the actual size of your file manually at "Flxpreloader-onUpdate-bytesTotal"!-->
 	<app preloader="flixel.system.FlxPreloader" />
 	
