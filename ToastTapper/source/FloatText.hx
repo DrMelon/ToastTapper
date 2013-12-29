@@ -22,9 +22,11 @@ class FloatText extends FlxText
 		LifeTime = Life;
 		CurrentLife = 0.01;
 		
-		maxVelocity.y = 30;
-		velocity.y = -30;
+		maxVelocity.y = 60;
+		velocity.y = -60;
 		moves = true;
+		allowCollisions = 0;
+		solid = false;
 		
 	}
 	
@@ -34,9 +36,9 @@ class FloatText extends FlxText
 		
 		
 		
-		FadeValue = LifeTime - (CurrentLife / LifeTime);
+		//FadeValue = LifeTime - (CurrentLife / LifeTime);
 		
-		set_alpha(FadeValue);
+		//set_alpha(FadeValue);
 		
 		CurrentLife += 1 / 60; // Life is in seconds.
 	

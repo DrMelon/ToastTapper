@@ -63,9 +63,12 @@ class PlayState extends FlxState
 		TheBigToastSlice = new FlxSprite(720 / 2, 1280 / 3, "assets/images/Toast.png");
 		TheBigToastSlice.scale = new FlxPoint(3, 3);
 		TheBigToastSlice.setOriginToCenter();
+		TheBigToastSlice.solid = false;
+		
 		
 		// Set up text display for toast.
 		HowMuchToast = new FlxText(10, 10, 1000, "Toast: ", 32);
+		
 		
 		add(Background);
 		add(TheBigToastSlice);
@@ -101,9 +104,7 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		// Set the score text up!
-		HowMuchToast.text = ToastSlices + " slices of Toast.";
-		
-		
+		HowMuchToast.text = ToastSlices + " slices of Toast.";		
 		
 		// When the toast is tapped, increase toast. Duh.
 		touch = FlxG.touches.getFirst();

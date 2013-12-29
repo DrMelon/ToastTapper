@@ -8,8 +8,8 @@
 	<!-- Android-specific options -->
 	<setenv name="JAVA_HOME" value="C:/Program Files/Java/jdk1.7.0_45" if="android" />
 	<window width="0" height="0" if="android"/>
-	<window hardware="true" allow-shaders="true" require-shaders="true" if="android"/>
-	<window vsync="true" antialiasing="1" if="android"/>
+	<window hardware="true" allow-shaders="true" require-shaders="false" if="android"/>
+	<window vsync="true" antialiasing="0" if="android"/>
 	<window orientation="portrait" if="android"/>
 	
 	
